@@ -1,0 +1,13 @@
+/ A program to play a higher/lower guessing game with the user.
+/ If the user enters a number below 33, it should print "1" and reprompt.
+/ If the user enters a number above 33, it should print "-1" and reprompt.
+/ If the user enters 33, it should print "0" and terminate.
+
+/ YOUR CODE HERE
+
+/ Variables
+guess:		.DATA 0
+answer:		.DATA 33
+lower:		.DATA -1	/ To be printed when the user guesses too high
+correct:	.DATA 0		/ To be printed when the user guesses correctly, before terminating
+higher:		.DATA 1		/ To be printed when the user guesses too low

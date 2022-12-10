@@ -1,0 +1,9 @@
+/ A program to take in a dividend and divisor from the user and print out a quotient and remainder.
+/ Because we have no DIVIDE operation, this is accomplished through iterated subtraction.
+		
+/ YOUR CODE HERE
+
+/ Variables
+dividend:	.DATA 0
+divisor:	.DATA 0
+quotient:	.DATA 0

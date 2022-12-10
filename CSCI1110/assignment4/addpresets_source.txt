@@ -1,0 +1,14 @@
+/ A prorgram to add two numbers that are hardcoded as variables.
+/ Currently set to add 1+2, but you can change "augend" and "addend" if you like.
+
+		LOAD augend	/ Load the first number into the register
+		ADD addend	/ Add the second number into the register
+		STORE sum	/ Copy the sum from the register into memory for output
+		OUT sum		/ Output the sum
+		HALT		/ Stop execution
+
+/ Variables
+/ We need to reserve a space for the sum but it doesn't have a meaningful initial value.
+augend:		.DATA 1
+addend:		.DATA 2
+sum:		.DATA 0

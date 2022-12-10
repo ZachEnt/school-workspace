@@ -1,0 +1,9 @@
+/ A program to take in three variables x, y, and z and output 3x-2y+z.
+
+/ YOUR CODE HERE
+
+/ Variables
+x:		.DATA 0
+y:		.DATA 0
+z:		.DATA 0
+answer:		.DATA 0

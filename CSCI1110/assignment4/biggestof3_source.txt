@@ -1,0 +1,39 @@
+/ Program to take 3 inputs from the user and print out the biggest one.
+
+		/ Take in 3 inputs x, y, and z
+		IN x
+		IN y
+		IN z
+
+		/ Compare x to y, jump away if we find x is less than y
+		LOAD x
+		COMPARE y
+		JUMPLT y>x
+
+		/ x is stil in register, no need to reload it
+		/ Compare x to z, jump away if we find x is less than z
+x>=y:		COMPARE z
+		JUMPLT zbiggest
+
+		/ If we're here, x>=y and x>=z, so output x and quit
+xbiggest:	OUT x
+		HALT
+
+		/ If we're here, x is out of the running but we still have y and z
+		/ Compare y to z, jump away if we find y is less than z
+y>x:		LOAD y
+		COMPARE z
+		JUMPLT zbiggest
+
+		/ If we're here, y>x and y>=z, so output y and quit
+ybiggest:	OUT y
+		HALT
+
+		/ If we're here, z>x and z>y, so output z and quit
+zbiggest:	OUT z
+		HALT
+
+/ Variables		
+x:		.DATA 0
+y:		.DATA 0
+z:		.DATA 0

@@ -1,0 +1,16 @@
+/ A program to add two numbers that the user enters.
+
+		IN augend	/ Take in first number to add
+		IN addend	/ Take in second number to add
+		LOAD augend	/ Load the first number into the register
+		ADD addend	/ Add the second number into the register
+		STORE sum	/ Copy the sum from the register into memory for output
+		OUT sum		/ Output the sum
+		HALT		/ Stop execution
+
+/ Variables
+/ Augend and addend are taken from the user and the sum is calculated, so none need
+/	an initial value, thus the "0"s.
+augend:		.DATA 0
+addend:		.DATA 0
+sum:		.DATA 0

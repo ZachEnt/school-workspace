@@ -1,0 +1,27 @@
+/ Program to count from a first input (inclusive) to a second input (exclusive).
+/ Note that this may result in counting either up or down.
+
+		/ Take in the starting and stopping points from the user
+		IN curr
+		IN target
+
+		/ Each iteration of the loop prints out one number.
+loop:		LOAD curr		/ Load the current number into the register
+		COMPARE target		/ Compare it to the number we're counting to
+		JUMPEQ end		/ If they're now equal (i.e., we've reached the destination), jump to end
+		OUT curr		/ Otherwise, print out the current number
+		JUMPGT countdown	/ If this number is bigger than the target, we have to count down
+
+		/ If we're still here, we're counting upward
+countup:	INCREMENT curr		/ Increase current number by 1
+		JUMP loop		/ Repeat the loop, checking if we've reached the destination
+
+		/ If we jumped here, we're counting downward
+countdown:	DECREMENT curr		/ Decrease current number by 1
+		JUMP loop		/ Repeat the loop, checking if we've reached the destination
+
+end:		HALT			/ Stop execution
+
+/ Variables
+curr:		.DATA 0
+target:		.DATA 0

@@ -1,0 +1,33 @@
+/ Program to take in two non-negative integers from the user and multiply them.
+/ Note that because we don't have a MULTIPLY operation, we accomplish this via iterated addition.
+
+		/ Get multiplicand and multiplier from user
+		IN multiplicand
+		IN multiplier
+
+		/ loop while the multiplier > 0
+loop:		LOAD multiplier
+		COMPARE zero
+		JUMPEQ end  / Exit the loop once multiplier = 0
+		DECREMENT multiplier / Subtract 1 from multiplier each iteration
+		
+		/ Add the multiplicand into the product
+		LOAD product
+		ADD multiplicand
+		STORE product
+		
+		/ End of loop body, repeat
+		JUMP loop
+
+		/ Once multiplication is complete, print product and halt
+end:		OUT product
+		HALT
+		
+
+
+
+/ Variables
+multiplicand:	.DATA 0		/ Number that we'll be adding into product repeatedly
+multiplier:	.DATA 0		/ Number of times that the multiplicand will be added into product
+product:	.DATA 0
+zero:		.DATA 0		/ Need a literal zero defined so we can compare the multiplier to zero
