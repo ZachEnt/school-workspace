@@ -5,6 +5,23 @@
 
 / YOUR CODE HERE
 
+loop:   IN guess
+        LOAD guess
+        COMPARE answer
+        JUMPGT lo
+        JUMPLT hi
+        JUMPEQ cor
+
+
+lo:     OUT lower
+        JUMP loop
+
+hi:     OUT higher
+        JUMP loop
+
+cor:    OUT correct
+        HALT
+
 / Variables
 guess:		.DATA 0
 answer:		.DATA 33

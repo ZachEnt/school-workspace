@@ -1,6 +1,32 @@
 / A program to take in three variables x, y, and z and output 3x-2y+z.
 
+/   x = int(input())
+/   y = int(input())
+/   z = int(input())
+/   answer = 0
+/ 
+/   print(3 * x - 2 * y + z)
+/   print((x + x + x) - (y + y) + z)
+
 / YOUR CODE HERE
+
+        IN x
+        IN y
+        IN z
+        LOAD x
+        ADD x
+        ADD x
+        STORE x
+        LOAD y
+        ADD y
+        STORE y
+        LOAD x
+        SUBTRACT y
+        ADD z
+        STORE answer
+        OUT answer
+        HALT
+
 
 / Variables
 x:		.DATA 0

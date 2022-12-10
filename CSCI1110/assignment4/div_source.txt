@@ -3,6 +3,27 @@
 		
 / YOUR CODE HERE
 
+        IN dividend
+        IN divisor
+loop:   LOAD dividend
+        COMPARE divisor
+        JUMPEQ eqgr
+        JUMPGT  eqgr
+        JUMPLT less
+
+
+
+eqgr:   LOAD dividend
+        Subtract divisor
+        STORE dividend
+        LOAD quotient
+        INCREMENT quotient
+        JUMP loop
+
+less:   OUT quotient
+        OUT dividend
+        HALT
+
 / Variables
 dividend:	.DATA 0
 divisor:	.DATA 0

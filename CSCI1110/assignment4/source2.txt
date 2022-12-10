@@ -1,0 +1,17 @@
+/ x = 0
+/ y = int(input())
+/ while x < y:
+/   print(x)
+/   x = x + 1
+
+        IN y
+loop:   LOAD x
+        COMPARE y
+        JUMPEQ end
+        OUT x
+        INCREMENT x / M[x] + 1 -> M[x]
+        JUMP loop
+end:    HALT
+
+x:      .DATA 0
+y:      .DATA 0

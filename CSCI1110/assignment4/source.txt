@@ -1,1 +1,9 @@
-HALT
+        LOAD x
+        COMPARE y / Check if x is bigger than y
+        JUMPLT ybig
+xbig:   OUT x
+        HALT
+ybig:   OUT y 
+        HALT
+x:      .DATA 5
+y:      .DATA 3
